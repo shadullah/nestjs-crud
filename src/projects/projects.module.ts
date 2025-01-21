@@ -14,9 +14,10 @@ import { ProjectsController } from "./controller/projects.controller";
         }
     ]),
     CloudinaryModule
-], providers:[ProjectsService, AppService],
-controllers:[ProjectsController],
-exports:[ProjectsService],
+    ], 
+    providers:[ProjectsService, AppService],
+    controllers:[ProjectsController],
+    exports:[ProjectsService],
 })
 
 export class ProjectModule {}

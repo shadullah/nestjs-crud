@@ -8,12 +8,12 @@ export class ProjectsDto{
 
     @IsArray()
     @IsString({each:true})
-    images!:string;
+    images!:string[];
     
     @IsString()
     description!:string;
 
     @IsArray()
     @IsString({each:true})
-    work!:string;
+    work!:string[];
 }

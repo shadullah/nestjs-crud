@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Controller, Delete, Get, InternalServerErrorException, Post, Put, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import { BadRequestException, Body, Controller, Delete, Get, InternalServerErrorException, Param, Post, Put, UploadedFiles, UseInterceptors } from '@nestjs/common';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { ProjectsDto } from '../dtos/projects.dto';
 import { AppService } from 'src/app/app.service';
@@ -47,22 +47,24 @@ export class ProjectsController {
 
     @Get()
     findAll() {
-        return 'find all projects';
+        return this.projectsService.getProjects();
     }
 
 
     @Get(':id')
-    findOne(){
-        return 'fetch the project by id'
+    findOne(@Param('id') id:string){
+        // return 'fetch the project by id'
+        return this.projectsService.getProjectById(id)
     }
 
     @Put(':id')
-    update(){
-        return 'update the project by id'
+    update(@Param('id') id:string, @Body() project:ProjectsDto){
+        console.log(id, " project: ",project);
+        return this.projectsService.updateProjectInfo(id, project)
     }
 
     @Delete(':id')
-    delete(){
-        return 'delete the project by id'
+    deleteproject(@Param('id') id:string){
+        return this.projectsService.deleteOne(id)
     }
 }

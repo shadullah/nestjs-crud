@@ -5,16 +5,16 @@ export type ProjectsDocument = HydratedDocument<Project>
 
 @Schema({timestamps:true})
 export class Project{
-    @Prop({required:true})
+    @Prop({required:true, type: String})
     title!:string
-    @Prop({required:true})
+    @Prop({required:true,type: String})
     client!:string
-    @Prop({required:true})
+    @Prop({required:true,type: String})
     description!:string
     @Prop({required:true, type:[String], default:[]})
     images!:string[]
     @Prop({required:true, type:[String]})
-    work!:string
+    work!:string[]
 }
 
 export const ProjectSchema = SchemaFactory.createForClass(Project)
