@@ -17,7 +17,7 @@ export class ProjectsService {
     }
 
     async getProjects(){
-        const projects = await this.projectModel.find()
+        const projects = await this.projectModel.find().exec()
 
         if(!projects || projects.length===0) throw new NotFoundException('no Projects found')
 
@@ -28,7 +28,7 @@ export class ProjectsService {
         if(!Types.ObjectId.isValid(id)){
             throw new BadRequestException('Invalid project Id')
         }
-        const project = await this.projectModel.findById(id)
+        const project = await this.projectModel.findById(id).exec()
 
         if(!project) throw new BadRequestException('No project found by this id')
 
