@@ -1,8 +1,8 @@
 {
   "name": "portfolio-management",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "A protfolio project management backend with nestjs",
+  "author": "Shadullah Sakib",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
