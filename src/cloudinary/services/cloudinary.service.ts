@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { UploadApiErrorResponse, UploadApiResponse, v2 } from "cloudinary";
+import { error } from "node:console";
 import { Readable } from "node:stream";
 
 @Injectable()
@@ -42,5 +43,17 @@ export class CloudinaryService {
             })
         })
         return Promise.all(uploadPromises)
+    }
+
+    async deleteImg(publicId:string):Promise<{result:string}>{
+        return new Promise((resolve, reject)=>{
+            v2.uploader.destroy(publicId, (error,result)=>{
+                if(error){
+                    console.log("cloudinary delete error: ", error);
+                    return reject(error)
+                }
+                resolve(result)
+            })
+        })
     }
 }

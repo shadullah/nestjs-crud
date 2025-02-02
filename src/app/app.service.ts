@@ -13,6 +13,15 @@ export class AppService {
     return result.secure_url;
   }
 
+  async deleteImageFromCloudinary(publicId:string){
+    try {
+        const res = await this.cloudinary.deleteImg(publicId)
+        return res.result === 'ok';
+    } catch (error) {
+        console.log("error deleting image from cloudinary: ", error);
+    }
+}
+
   getHello(): string {
     return 'Hello World!';
   }

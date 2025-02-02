@@ -41,6 +41,10 @@ export class ProjectsService {
         }
         const {title, client, description, images, work}= attrs;
 
+        if ([title, client, description].some((field) => field?.trim() === "")) {
+            throw new BadRequestException("All fields are required");
+          }
+
         if(!Types.ObjectId.isValid(id)){
             throw new BadRequestException('Invalid project Id')
         }
