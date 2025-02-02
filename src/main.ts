@@ -10,9 +10,9 @@ async function bootstrap() {
 
   // Enable CORS
   app.enableCors({
-    origin: 'http://localhost:3000', // Replace with your frontend URL
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Specify allowed HTTP methods
-    credentials: true, // If you need to include cookies
+    origin: 'https://nextjs-portfolio-management.vercel.app', 
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', 
+    credentials: true, 
   });
 
   await app.listen(process.env.PORT ?? 8000);
