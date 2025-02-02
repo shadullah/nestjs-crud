@@ -10,7 +10,7 @@ async function bootstrap() {
 
   // Enable CORS
   app.enableCors({
-    origin: 'https://nextjs-portfolio-management.vercel.app', 
+    origin: ['https://nextjs-portfolio-management.vercel.app'], 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', 
     credentials: true, 
   });
