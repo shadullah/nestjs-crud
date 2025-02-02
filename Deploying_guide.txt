@@ -1,0 +1,16 @@
+Deploy document You can follow to deploy Nestjs: https://www.technog.com.br/blog/tips-and-tricks/how-to-deploy-a-nestjs-app-for-free-on-vercel/
+
+Steps to deploy nestjs app in Vercel: 
+- Create nestjs app 
+    . $ npm i -g @nestjs/cli 
+    . $ nest new (foldername or project-name)
+
+- Create vercel.json
+
+- Text to paste is given in vercel.json for this folder structure
+
+- Build nestjs app 
+    . $ npm run build 
+
+- run vercel cmd 
+    . $ vercel --prod

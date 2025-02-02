@@ -10,7 +10,7 @@
 
 ## NestJS Backend API
 
-This is my first backend project using NestJS and TypeScript, which I successfully completed in 10 days. The project is built with a scalable folder structure, includes CRUD operations for various resources, and integrates Cloudinary for image uploads and deletions. The backend is connected to MongoDB using Mongoose, with well-defined database schemas.
+This is my first backend project using NestJS and TypeScript, which I successfully completed in 10 days. The project is built with a scalable folder structure, includes CRUD operations for various resources, and integrates Cloudinary for image uploads and deletions. The backend is connected to MongoDB using Mongoose, with well-defined database schemas. Lastly, Deployed the project to cloud to the help of Vercel.
 
 ## Project setup
 
@@ -25,6 +25,12 @@ $ MONGO_URI=your_mongodb_connection_string
 $ CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 $ CLOUDINARY_API_KEY=your_cloudinary_api_key
 $ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+```
+
+## Live Link
+
+```bash
+$ https://nestjs-crud-ruddy.vercel.app/projects
 ```
 
 ## Compile and run the project
@@ -77,7 +83,7 @@ Storage: Cloudinary (for image uploads)
 
 Authentication: (Add if applicable, e.g., JWT, OAuth)
 
-Hosting: (If deployed, mention your hosting platform)
+Hosting: Vercel
 
 ## API Endpoints
 
@@ -104,6 +110,8 @@ Project Routes
 - Writing Mongoose schemas and handling MongoDB connections.
 
 - Working with TypeScript for backend development.
+
+- Deploying to cloud with the help of Vercel
 
 ## Future Enhancements
 
